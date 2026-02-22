@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#000000"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter">
+    <!-- The S shape -->
+    <path d="M65 30 H35 A10 10 0 0 0 35 50 H55 A10 10 0 0 1 55 70 H25" />
+    <!-- The A shape interlocking -->
+    <path d="M45 70 L65 25 L85 70 M55 55 H75" />
+  </g>
+</svg>

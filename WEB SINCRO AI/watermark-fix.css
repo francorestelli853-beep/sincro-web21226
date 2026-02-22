@@ -1,0 +1,25 @@
+/* Overlay to hide Spline watermark */
+#robot-container::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 180px;
+    height: 50px;
+    background: #0a0a0a;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Alternative: Use a gradient overlay at the bottom */
+#robot-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to top, #0a0a0a 0%, transparent 100%);
+    z-index: 5;
+    pointer-events: none;
+}

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sincro AI | Sincronizamos tu empresa con el futuro</title>
+    <meta name="description" content="Automatización inteligente y soluciones de IA para empresas modernas.">
+    <link rel="icon" type="image/svg+xml" href="sincro_s_clean.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sincro-gray': '#f5f5f7',
+                        'sincro-dark': '#1d1d1f',
+                        'sincro-light': '#fbfbfd',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loading-screen.css">
+    <link rel="stylesheet" href="detailed-sections.css">
+    <link rel="stylesheet" href="enhanced-previews.css">
+    <link rel="stylesheet" href="use-cases.css">
+    <link rel="stylesheet" href="tech-scroller.css">
+    <link rel="stylesheet" href="performance-metrics.css">
+    <link rel="stylesheet" href="wa-chat-charts.css">
+    <link rel="stylesheet" href="n8n-chat.css">
+
+    <!-- Spline Runtime -->
+    <script type="module" src="https://unpkg.com/@splinetool/runtime@1.0.0/build/runtime.js" defer></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js" defer></script>
+</head>
+
+<body class="bg-[#0a0a0a] text-white font-sans antialiased">
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo-text">Sincro<span>AI</span></div>
+            <p class="loading-welcome">Bienvenido al futuro de la automatización</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-xl border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-semibold tracking-tight text-white">Sincro<span
+                        class="font-light">AI</span></a>
+                <div class="flex items-center gap-4 md:gap-8">
+                    <a href="#hero"
+                        class="text-xs md:text-sm text-gray-400 hover:text-white transition-colors">Inicio</a>
+                    <a href="#servicios"
+                        class="text-xs md:text-sm text-gray-400 hover:text-white transition-colors">Servicios</a>
+                    <a href="#metodologia"
+                        class="text-xs md:text-sm text-gray-400 hover:text-white transition-colors">Metodología</a>
+                    <a href="#contacto"
+                        class="text-xs md:text-sm text-gray-400 hover:text-white transition-colors">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- 3D Robot Background - SPLINE (Fullscreen) -->
+        <div id="robot-container" class="robot-3d-container">
+            <iframe src='https://my.spline.design/3drobotheadtrackingmouse-aCPOPLeX34hbaD7nP9ZwLIdj/' frameborder='0'
+                width='100%' height='100%' allow="autoplay; fullscreen; xr-spatial-tracking" loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Content Layer - Split Layout -->
+        <div class="hero-content-wrapper">
+            <!-- Left Text -->
+            <div class="hero-text-left">
+                <h1 class="hero-title-side">
+                    Sincro<br />AI
+                </h1>
+            </div>
+
+            <!-- Right Text -->
+            <div class="hero-text-right">
+                <h1 class="hero-title-side">
+                    Automatiza<br /><span class="font-semibold">todo</span>
+                </h1>
+                <p class="hero-subtitle-side">
+                    Automatización de procesos <span class="font-semibold">para empresas</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Detailed Services Section -->
+    <section id="servicios" class="bg-[#050505]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-20">
+                <h2 class="mb-4">
+                    Integración de <span class="font-semibold">IA para empresas</span>
+                </h2>
+                <p class="text-gray-400 font-light max-w-3xl mx-auto leading-relaxed">
+                    Tecnología de vanguardia diseñada para impulsar el crecimiento real de tu negocio.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service Card 1: Chatbots -->
+                <div class="service-card-detailed group">
+                    <div class="service-icon-large">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" class="w-16 h-16">
+                            <rect x="16" y="20" width="32" height="28" rx="4" stroke-width="2" />
+                            <circle cx="26" cy="30" r="2" fill="currentColor" />
+                            <circle cx="38" cy="30" r="2" fill="currentColor" />
+                            <path d="M26 38 Q32 42 38 38" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="mb-4">Chatbots con IA</h3>
+                    <p class="text-gray-400 font-light leading-relaxed mb-6">
+                        Asistentes virtuales entrenados con tus datos para atención al cliente 24/7 con procesamiento de
+                        lenguaje natural.
+                    </p>
+                    <button class="btn-base btn-action w-full justify-between"
+                        onclick="togglePreview('chatbot-preview')">
+                        <span>Ver Demo Chatbot</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+
+                    <!-- WhatsApp Chat Demo -->
+                    <div id="chatbot-preview" class="preview-collapsible">
+                        <div class="wa-chat-demo">
+                            <!-- WhatsApp Header -->
+                            <div class="wa-header">
+                                <div class="wa-avatar">🤖</div>
+                                <div class="wa-header-info">
+                                    <div class="wa-name">Sincro AI Bot</div>
+                                    <div class="wa-status">● en línea</div>
+                                </div>
+                                <div class="wa-time-badge">11:03 PM</div>
+                            </div>
+                            <!-- Messages -->
+                            <div class="wa-messages">
+                                <div class="wa-msg wa-msg-out">
+                                    <p>Perdón por la hora 😅 pero quería agendar una cita para mañana</p>
+                                    <span class="wa-ts">11:03 PM ✓✓</span>
+                                </div>
+                                <div class="wa-msg wa-msg-in">
+                                    <p>¡No se preocupe! Nuestro servicio al cliente es <strong>24/7</strong> 🌙</p>
+                                    <span class="wa-ts">11:03 PM</span>
+                                </div>
+                                <div class="wa-msg wa-msg-in">
+                                    <p>✅ <strong>Su cita fue agendada con éxito</strong> para mañana a las 10:00 AM. ¡Le
+                                        enviaremos un recordatorio!</p>
+                                    <span class="wa-ts">11:03 PM</span>
+                                </div>
+                                <div class="wa-msg wa-msg-out">
+                                    <p>Muchas gracias! 🙏</p>
+                                    <span class="wa-ts">11:04 PM ✓✓</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Automatización -->
+                <div class="service-card-detailed group">
+                    <div class="service-icon-large">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" class="w-16 h-16">
+                            <path d="M32 12 L32 28 M32 36 L32 52" stroke-width="2" stroke-linecap="round" />
+                            <path d="M12 32 L28 32 M36 32 L52 32" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="32" cy="32" r="4" fill="currentColor" />
+                            <circle cx="32" cy="12" r="3" stroke-width="2" />
+                            <circle cx="32" cy="52" r="3" stroke-width="2" />
+                            <circle cx="12" cy="32" r="3" stroke-width="2" />
+                            <circle cx="52" cy="32" r="3" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="mb-4">Automatización de Flujos</h3>
+                    <p class="text-gray-400 font-light leading-relaxed mb-6">
+                        Conectamos tus aplicaciones (CRM, Email, Slack) para eliminar tareas repetitivas y aumentar la
+                        productividad.
+                    </p>
+                    <button class="btn-base btn-action w-full justify-between"
+                        onclick="togglePreview('workflows-preview')">
+                        <span>Ver Flujos Make/n8n</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+
+                    <!-- Workflow Diagram -->
+                    <div id="workflows-preview" class="preview-collapsible">
+                        <div class="workflow-preview-enhanced">
+                            <div class="workflow-header">
+                                <span class="workflow-title">Flujo de Automatización</span>
+                                <span class="workflow-status">● Activo</span>
+                            </div>
+                            <div class="workflow-steps">
+                                <div class="workflow-step-card">
+                                    <div class="step-number">1</div>
+                                    <div class="step-icon">📧</div>
+                                    <div class="step-name">Gmail</div>
+                                    <div class="step-desc">Nuevo email</div>
+                                </div>
+                                <div class="workflow-connector">→</div>
+                                <div class="workflow-step-card">
+                                    <div class="step-number">2</div>
+                                    <div class="step-icon">🤖</div>
+                                    <div class="step-name">AI Process</div>
+                                    <div class="step-desc">Análisis IA</div>
+                                </div>
+                                <div class="workflow-connector">→</div>
+                                <div class="workflow-step-card">
+                                    <div class="step-number">3</div>
+                                    <div class="step-icon">💼</div>
+                                    <div class="step-name">CRM Update</div>
+                                    <div class="step-desc">Lead creado</div>
+                                </div>
+                            </div>
+                            <div class="workflow-stats">
+                                <div class="workflow-stat">
+                                    <span class="stat-label">Ejecutado hoy</span>
+                                    <span class="stat-value">247 veces</span>
+                                </div>
+                                <div class="workflow-stat">
+                                    <span class="stat-label">Tiempo promedio</span>
+                                    <span class="stat-value">1.2s</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Modelos Predictivos -->
+                <div class="service-card-detailed group">
+                    <div class="service-icon-large">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" class="w-16 h-16">
+                            <path d="M12 48 L20 36 L28 40 L36 28 L44 32 L52 16" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <rect x="8" y="12" width="48" height="40" rx="2" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="mb-4">Modelos Predictivos</h3>
+                    <p class="text-gray-400 font-light leading-relaxed mb-6">
+                        Análisis de datos avanzado para predecir tendencias de mercado y comportamiento de clientes.
+                    </p>
+                    <button class="btn-base btn-action w-full justify-between"
+                        onclick="togglePreview('predictive-preview')">
+                        <span>Ver Análisis IA</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+
+                    <!-- Analytics Chart -->
+                    <div id="predictive-preview" class="preview-collapsible">
+                        <div class="analytics-preview-enhanced">
+                            <div class="analytics-header">
+                                <span class="analytics-title">Métricas Predictivas</span>
+                                <span class="analytics-period">Últimos 30 días</span>
+                            </div>
+                            <div class="analytics-grid">
+                                <div class="analytics-card">
+                                    <div class="analytics-label">Tasa de Conversión</div>
+                                    <div class="analytics-value">85%</div>
+                                    <div class="analytics-trend positive">+12% vs mes anterior</div>
+                                    <div class="analytics-bar">
+                                        <div class="bar-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics-card">
+                                    <div class="analytics-label">Retención de Clientes</div>
+                                    <div class="analytics-value">92%</div>
+                                    <div class="analytics-trend positive">+8% vs mes anterior</div>
+                                    <div class="analytics-bar">
+                                        <div class="bar-fill" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics-card">
+                                    <div class="analytics-label">ROI Proyectado</div>
+                                    <div class="analytics-value">150%</div>
+                                    <div class="analytics-trend positive">+45% vs mes anterior</div>
+                                    <div class="analytics-bar">
+                                        <div class="bar-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: Desarrollo a Medida -->
+                <div class="service-card-detailed group">
+                    <div class="service-icon-large">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" class="w-16 h-16">
+                            <path d="M20 24 L28 32 L20 40" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M44 24 L36 32 L44 40" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <rect x="12" y="16" width="40" height="32" rx="2" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="mb-4">Desarrollo a Medida</h3>
+                    <p class="text-gray-400 font-light leading-relaxed mb-6">
+                        Soluciones de software complejas integrando APIs de OpenAI, Anthropic y sistemas propietarios.
+                    </p>
+                    <button class="btn-base btn-action w-full justify-between"
+                        onclick="togglePreview('dashboard-preview-container')">
+                        <span>Ver Dashboard</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+
+                    <!-- Dashboard Preview -->
+                    <div id="dashboard-preview-container" class="preview-collapsible">
+                        <div class="dashboard-preview">
+                            <div class="dashboard-header">
+                                <span class="dashboard-title">Panel de Control AI</span>
+                                <span class="dashboard-status">● En vivo</span>
+                            </div>
+                            <!-- KPI Cards -->
+                            <div class="dashboard-grid-extended">
+                                <div class="dashboard-card">
+                                    <div class="dashboard-label">Consultas IA</div>
+                                    <div class="dashboard-value">1,247</div>
+                                    <div class="dashboard-change">+23% ↑</div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="dashboard-label">Tiempo Resp.</div>
+                                    <div class="dashboard-value">0.8s</div>
+                                    <div class="dashboard-change">-15% ↓</div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="dashboard-label">Precisión</div>
+                                    <div class="dashboard-value">98.5%</div>
+                                    <div class="dashboard-change">+2% ↑</div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="dashboard-label">Tareas Auto.</div>
+                                    <div class="dashboard-value">3,892</div>
+                                    <div class="dashboard-change">+156% ↑</div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="dashboard-label">Ahorro Tiempo</div>
+                                    <div class="dashboard-value">847h</div>
+                                    <div class="dashboard-change">+89% ↑</div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="dashboard-label">Satisfacción</div>
+                                    <div class="dashboard-value">96%</div>
+                                    <div class="dashboard-change">+12% ↑</div>
+                                </div>
+                            </div>
+                            <!-- Charts Row -->
+                            <div class="dash-charts-row">
+                                <!-- Donut Chart: Lead Sources -->
+                                <div class="dash-chart-box">
+                                    <div class="dash-chart-title">Origen de Leads</div>
+                                    <div class="donut-wrap">
+                                        <svg viewBox="0 0 120 120" class="donut-svg">
+                                            <!-- Background circle -->
+                                            <circle cx="60" cy="60" r="45" fill="none" stroke="#1a1a2e"
+                                                stroke-width="18" />
+                                            <!-- Instagram: 35% → 99.9 of 285.27 -->
+                                            <circle cx="60" cy="60" r="45" fill="none" stroke="#e1306c"
+                                                stroke-width="18" stroke-dasharray="99.9 185.37" stroke-dashoffset="0"
+                                                class="donut-seg" style="--delay:0.1s" />
+                                            <!-- Google Ads: 28% → 79.87 -->
+                                            <circle cx="60" cy="60" r="45" fill="none" stroke="#4285f4"
+                                                stroke-width="18" stroke-dasharray="79.87 205.4"
+                                                stroke-dashoffset="-99.9" class="donut-seg" style="--delay:0.3s" />
+                                            <!-- WhatsApp: 22% → 62.76 -->
+                                            <circle cx="60" cy="60" r="45" fill="none" stroke="#25d366"
+                                                stroke-width="18" stroke-dasharray="62.76 222.51"
+                                                stroke-dashoffset="-179.77" class="donut-seg" style="--delay:0.5s" />
+                                            <!-- Referidos: 15% → 42.79 -->
+                                            <circle cx="60" cy="60" r="45" fill="none" stroke="#a78bfa"
+                                                stroke-width="18" stroke-dasharray="42.79 242.48"
+                                                stroke-dashoffset="-242.53" class="donut-seg" style="--delay:0.7s" />
+                                            <!-- Center text -->
+                                            <text x="60" y="56" text-anchor="middle" fill="white" font-size="13"
+                                                font-weight="600">847</text>
+                                            <text x="60" y="70" text-anchor="middle" fill="#888" font-size="7">leads
+                                                totales</text>
+                                        </svg>
+                                    </div>
+                                    <div class="donut-legend">
+                                        <div class="legend-item"><span class="legend-dot"
+                                                style="background:#e1306c"></span>Instagram <b>35%</b></div>
+                                        <div class="legend-item"><span class="legend-dot"
+                                                style="background:#4285f4"></span>Google Ads <b>28%</b></div>
+                                        <div class="legend-item"><span class="legend-dot"
+                                                style="background:#25d366"></span>WhatsApp <b>22%</b></div>
+                                        <div class="legend-item"><span class="legend-dot"
+                                                style="background:#a78bfa"></span>Referidos <b>15%</b></div>
+                                    </div>
+                                </div>
+                                <!-- Bar Chart: Monthly Conversions -->
+                                <div class="dash-chart-box">
+                                    <div class="dash-chart-title">Conversiones por Mes</div>
+                                    <div class="bar-chart-wrap">
+                                        <div class="bar-chart-bars">
+                                            <div class="bc-bar-group">
+                                                <div class="bc-bar" style="--h:55%;--c:#6366f1"></div><span>Oct</span>
+                                            </div>
+                                            <div class="bc-bar-group">
+                                                <div class="bc-bar" style="--h:70%;--c:#6366f1"></div><span>Nov</span>
+                                            </div>
+                                            <div class="bc-bar-group">
+                                                <div class="bc-bar" style="--h:60%;--c:#6366f1"></div><span>Dic</span>
+                                            </div>
+                                            <div class="bc-bar-group">
+                                                <div class="bc-bar" style="--h:80%;--c:#a78bfa"></div><span>Ene</span>
+                                            </div>
+                                            <div class="bc-bar-group">
+                                                <div class="bc-bar" style="--h:90%;--c:#a78bfa"></div><span>Feb</span>
+                                            </div>
+                                            <div class="bc-bar-group">
+                                                <div class="bc-bar" style="--h:100%;--c:#25d366"></div><span>Mar</span>
+                                            </div>
+                                        </div>
+                                        <div class="bc-label">+82% crecimiento trimestral</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section (Trust Building) -->
+    <section id="metodologia" class="bg-[#050505] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="tracking-tight mb-6">Metodología <span class="font-semibold">Sincro</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Un proceso riguroso y transparente diseñado para garantizar
+                    que la transición tecnológica de tu empresa sea impecable.</p>
+            </div>
+
+            <div class="methodology-grid">
+                <div class="methodology-card">
+                    <div class="step-badge">1</div>
+                    <h3 class="!text-xl font-semibold mb-4">Descubrimiento</h3>
+                    <p class="text-sm">Auditamos tu flujo de trabajo actual para identificar cuellos de botella y
+                        oportunidades críticas de automatización.</p>
+                </div>
+                <div class="methodology-card">
+                    <div class="step-badge">2</div>
+                    <h3 class="!text-xl font-semibold mb-4">Diseño a Medida</h3>
+                    <p class="text-sm">Creamos el mapa lógico de tus nuevos procesos, integrando IA y herramientas de
+                        sincronización sin fricción.</p>
+                </div>
+                <div class="methodology-card">
+                    <div class="step-badge">3</div>
+                    <h3 class="!text-xl font-semibold mb-4">Ejecución</h3>
+                    <p class="text-sm">Desplegamos la infraestructura técnica en entornos seguros, asegurando que tus
+                        datos estén protegidos en todo momento.</p>
+                </div>
+                <div class="methodology-card">
+                    <div class="step-badge">4</div>
+                    <h3 class="!text-xl font-semibold mb-4">Optimización</h3>
+                    <p class="text-sm">Monitoreamos el rendimiento en tiempo real y ajustamos los modelos de IA para
+                        maximizar tu ROI mes tras mes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalized Solutions Section -->
+    <section class="bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="tracking-tight mb-8">
+                        Soluciones <span class="font-semibold">100%</span><br />
+                        <span class="font-semibold">Personalizadas</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        ¿Tienes un problema específico que ninguna herramienta del mercado resuelve?
+                    </p>
+                    <p class="text-gray-500 mb-8">
+                        En <span class="text-white font-medium">Sincro IA</span> entendemos que cada negocio es único.
+                        No ofrecemos solo paquetes prearmados; analizamos tu infraestructura, tus cuellos de botella
+                        y diseñamos una solución quirúrgica para tu problema puntual.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-300">Integración de sistemas heredados (Legacy) con IA moderna.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-300">Automatización de procesos industriales o logísticos específicos.
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-300">Consultoría estratégica para implementación de IA.</p>
+                        </div>
+                    </div>
+
+                    <a href="#contacto" class="btn-base btn-cta">
+                        Consultar mi Caso
+                    </a>
+                </div>
+
+                <div class="relative">
+                    <div class="use-cases-container">
+                        <h4 class="use-cases-title">Casos de Éxito</h4>
+
+                        <div class="use-case-card">
+                            <div class="use-case-icon">🏭</div>
+                            <div class="use-case-content">
+                                <h5 class="use-case-name">Manufactura</h5>
+                                <p class="use-case-desc">Sistema legacy integrado con IA para predicción de
+                                    mantenimiento</p>
+                                <div class="use-case-result">-85% errores humanos</div>
+                            </div>
+                        </div>
+
+                        <div class="use-case-card">
+                            <div class="use-case-icon">📦</div>
+                            <div class="use-case-content">
+                                <h5 class="use-case-name">Logística</h5>
+                                <p class="use-case-desc">Automatización de rutas y gestión de inventario con ML</p>
+                                <div class="use-case-result">+35% eficiencia operativa</div>
+                            </div>
+                        </div>
+
+                        <div class="use-case-card">
+                            <div class="use-case-icon">💼</div>
+                            <div class="use-case-content">
+                                <h5 class="use-case-name">Servicios</h5>
+                                <p class="use-case-desc">Chatbot personalizado para atención 24/7</p>
+                                <div class="use-case-result">+60% satisfacción cliente</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="bg-[#050505]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="tracking-tight mb-8">
+                        Programación <span class="font-semibold">Avanzada</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        No solo usamos herramientas no-code. Escribimos código robusto, escalable
+                        y seguro para integraciones complejas que requieren precisión técnica.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="tech-feature">
+                            <div class="flex items-center gap-3 mb-2">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                <h4 class="text-white font-medium">Arquitectura Escalable</h4>
+                            </div>
+                            <p class="text-gray-500 text-sm ml-8">Sistemas diseñados para crecer con tu empresa.</p>
+                        </div>
+
+                        <div class="tech-feature">
+                            <div class="flex items-center gap-3 mb-2">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                <h4 class="text-white font-medium">Seguridad de Datos</h4>
+                            </div>
+                            <p class="text-gray-500 text-sm ml-8">Cumplimiento con estándares de privacidad y cifrado.
+                            </p>
+                        </div>
+
+                        <div class="tech-feature">
+                            <div class="flex items-center gap-3 mb-2">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                <h4 class="text-white font-medium">Soporte Técnico Especializado</h4>
+                            </div>
+                            <p class="text-gray-500 text-sm ml-8">Equipo de ingenieros listos para resolver incidencias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div>
+                    <div class="performance-showcase">
+                        <div class="spline-wrapper">
+                            <spline-viewer id="main-spline"
+                                url="https://prod.spline.design/rLauE7crSheWQGFR/scene.splinecode" loading-anim="false"
+                                hint="false" background="transparent" loading="lazy"></spline-viewer>
+                            <!-- Cover the Spline watermark in the bottom-right corner -->
+                            <div class="spline-watermark-cover"></div>
+                        </div>
+
+                        <script>
+                                (function () {
+                                    const wrapper = document.querySelector('.spline-wrapper');
+                                    const viewer = document.getElementById('main-spline');
+
+                                    // ── SCROLL FIX ──
+                                    // Use capture:true so we intercept wheel events BEFORE
+                                    // they reach the viewer's internal (passive) listeners.
+                                    // This lets us call preventDefault() and forward to the page.
+                                    if (wrapper) {
+                                        wrapper.addEventListener('wheel', function (e) {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            window.scrollBy({ top: e.deltaY, behavior: 'auto' });
+                                        }, { passive: false, capture: true });
+                                    }
+
+                                    // ── FADE IN ──
+                                    function fadeInViewer() {
+                                        if (viewer) viewer.style.opacity = '1';
+                                    }
+                                    if (viewer) {
+                                        viewer.addEventListener('load', function onLoad() {
+                                            setTimeout(fadeInViewer, 300);
+                                            viewer.removeEventListener('load', onLoad);
+                                        });
+                                    }
+                                    setTimeout(fadeInViewer, 3500); // hard fallback
+
+                                    // ── AUTO-ROTATION & INTERACTION ──
+                                    let lastX = null, lastY = null;
+                                    let returnTimer = null;
+                                    let isInteracting = false;
+                                    let autoRotateAngle = 0;
+
+                                    function getSplineCanvas() {
+                                        if (!viewer || !viewer.shadowRoot) return null;
+                                        return viewer.shadowRoot.querySelector('canvas');
+                                    }
+
+                                    function autoRotate() {
+                                        if (!isInteracting && viewer) {
+                                            autoRotateAngle += 0.015; // smooth rotation speed
+                                            const canvas = getSplineCanvas();
+                                            if (canvas) {
+                                                const rect = wrapper.getBoundingClientRect();
+                                                const cx = rect.left + rect.width / 2;
+                                                const cy = rect.top + rect.height / 2;
+
+                                                // Create a wider horizontal sweep for a "turntable" feel
+                                                const radiusX = rect.width * 0.45;
+                                                const radiusY = rect.height * 0.15;
+
+                                                // Add a bit of jitter to keep particles "agitated"
+                                                const jitter = (Math.random() - 0.5) * 4;
+                                                const targetX = cx + Math.cos(autoRotateAngle) * radiusX + jitter;
+                                                const targetY = cy + Math.sin(autoRotateAngle * 0.6) * radiusY + jitter;
+
+                                                const eventConfig = {
+                                                    bubbles: true, cancelable: true,
+                                                    clientX: targetX, clientY: targetY,
+                                                    view: window
+                                                };
+
+                                                canvas.dispatchEvent(new MouseEvent('mousemove', eventConfig));
+                                                // Support pointer events for newer Spline runtimes
+                                                if (window.PointerEvent) {
+                                                    canvas.dispatchEvent(new PointerEvent('pointermove', eventConfig));
+                                                }
+                                            }
+                                        }
+                                        requestAnimationFrame(autoRotate);
+                                    }
+                                    requestAnimationFrame(autoRotate);
+
+                                    if (wrapper) {
+                                        wrapper.addEventListener('mousemove', function (e) {
+                                            isInteracting = true;
+                                            clearInterval(returnTimer);
+                                            lastX = e.clientX;
+                                            lastY = e.clientY;
+
+                                            // Forward movement to the Spline canvas immediately
+                                            const canvas = getSplineCanvas();
+                                            if (canvas) {
+                                                const eventConfig = {
+                                                    bubbles: true, cancelable: true,
+                                                    clientX: e.clientX, clientY: e.clientY,
+                                                    view: window
+                                                };
+                                                canvas.dispatchEvent(new MouseEvent('mousemove', eventConfig));
+                                                if (window.PointerEvent) {
+                                                    canvas.dispatchEvent(new PointerEvent('pointermove', eventConfig));
+                                                }
+                                            }
+                                        });
+
+                                        wrapper.addEventListener('mouseleave', function () {
+                                            isInteracting = false;
+                                            if (lastX === null || !viewer) return;
+                                            const canvas = getSplineCanvas();
+                                            if (!canvas) return;
+
+                                            const rect = wrapper.getBoundingClientRect();
+                                            const cx = rect.left + rect.width / 2;
+                                            const cy = rect.top + rect.height / 2;
+                                            let step = 0;
+                                            const steps = 24;
+                                            const fromX = lastX, fromY = lastY;
+                                            lastX = null; lastY = null;
+
+                                            clearInterval(returnTimer);
+                                            returnTimer = setInterval(function () {
+                                                step++;
+                                                const t = step / steps;
+                                                const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+                                                const eventConfig = {
+                                                    bubbles: true, cancelable: true,
+                                                    clientX: fromX + (cx - fromX) * ease,
+                                                    clientY: fromY + (cy - fromY) * ease,
+                                                    view: window
+                                                };
+
+                                                canvas.dispatchEvent(new MouseEvent('mousemove', eventConfig));
+                                                if (window.PointerEvent) {
+                                                    canvas.dispatchEvent(new PointerEvent('pointermove', eventConfig));
+                                                }
+
+                                                if (step >= steps) {
+                                                    clearInterval(returnTimer);
+                                                }
+                                            }, 16);
+                                        });
+                                    }
+
+                                    // ── HIDE WATERMARK ──
+                                    function hideSplineLogo() {
+                                        if (viewer && viewer.shadowRoot) {
+                                            if (viewer.shadowRoot.querySelector('#sincro-hide-logo')) return;
+                                            const style = document.createElement('style');
+                                            style.id = 'sincro-hide-logo';
+                                            style.textContent = '#logo,.spline-watermark,#logo-container{display:none!important;opacity:0!important;pointer-events:none!important}';
+                                            viewer.shadowRoot.appendChild(style);
+                                        }
+                                    }
+                                    [500, 1500, 3000, 5000].forEach(t => setTimeout(hideSplineLogo, t));
+                                    if (viewer) {
+                                        new MutationObserver(hideSplineLogo)
+                                            .observe(viewer, { childList: true, subtree: true });
+                                    }
+                                })();
+                        </script>
+
+                        <div class="code-quality-badge mt-6 mx-auto">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                            </svg>
+                            <span>Propulsado por Sincro Engine</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Scroller - Full Width -->
+    <section class="bg-[#050505]" style="padding-top: 0;">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 mb-8">
+            <h3 class="text-3xl md:text-4xl font-light text-white text-center">Tech Stack</h3>
+        </div>
+
+        <!-- Animated Tech Scroller -->
+        <div class="tech-scroller-container">
+            <div class="tech-scroller">
+                <div class="tech-scroller-track">
+                    <div class="tech-badge-scroll">OpenAI GPT-4</div>
+                    <div class="tech-badge-scroll">Claude 3.5</div>
+                    <div class="tech-badge-scroll">Anthropic</div>
+                    <div class="tech-badge-scroll">Google Gemini</div>
+                    <div class="tech-badge-scroll">Antigravity</div>
+                    <div class="tech-badge-scroll">LangChain</div>
+                    <div class="tech-badge-scroll">Python</div>
+                    <div class="tech-badge-scroll">Node.js</div>
+                    <div class="tech-badge-scroll">React</div>
+                    <div class="tech-badge-scroll">Next.js</div>
+                    <div class="tech-badge-scroll">TensorFlow</div>
+                    <div class="tech-badge-scroll">PostgreSQL</div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="tech-scroller-track" aria-hidden="true">
+                    <div class="tech-badge-scroll">OpenAI GPT-4</div>
+                    <div class="tech-badge-scroll">Claude 3.5</div>
+                    <div class="tech-badge-scroll">Anthropic</div>
+                    <div class="tech-badge-scroll">Google Gemini</div>
+                    <div class="tech-badge-scroll">Antigravity</div>
+                    <div class="tech-badge-scroll">LangChain</div>
+                    <div class="tech-badge-scroll">Python</div>
+                    <div class="tech-badge-scroll">Node.js</div>
+                    <div class="tech-badge-scroll">React</div>
+                    <div class="tech-badge-scroll">Next.js</div>
+                    <div class="tech-badge-scroll">TensorFlow</div>
+                    <div class="tech-badge-scroll">PostgreSQL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="relative overflow-hidden">
+        <!-- Subtle Grid Background -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0"
+                style="background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px); background-size: 50px 50px;">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
+            <h2 class="tracking-tight mb-8">
+                Hablemos de tu <span class="font-semibold">futuro</span>
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-400 font-light max-w-3xl mx-auto mb-16 leading-relaxed">
+                ¿Listo para transformar tu negocio con IA? Contáctanos para una consulta gratuita y personalizada.
+            </p>
+
+            <a href="https://wa.me/541140682555?text=Hola%20Sincro%20AI,%20quisiera%20agendar%20una%20consulta"
+                target="_blank" class="btn-base btn-cta !text-xl !px-12 !py-6">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Agendar Consulta
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col items-center gap-4 text-center">
+                <div class="text-2xl font-semibold tracking-tight">
+                    Sincro<span class="font-light">AI</span>
+                </div>
+                <div class="flex items-center gap-6 mt-2">
+                    <a href="mailto:aisincro@gmail.com"
+                        class="text-gray-400 hover:text-white transition-all transform hover:scale-110" title="Email">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/sincro.ai" target="_blank"
+                        class="text-gray-400 hover:text-white transition-all transform hover:scale-110"
+                        title="Instagram">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.337 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.351-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.947s-.014-3.667-.072-4.947c-.2-4.359-2.617-6.78-6.98-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="text-xs text-gray-500 font-light">
+                    © 2026 Sincro AI. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom n8n-Powered Chat Widget -->
+    <div id="n8n-chat-widget"></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="n8n-chat.js"></script>
+
+
+    <!-- Robot Interactions (Loading & Scroll) -->
+    <script src="robot-interactions.js"></script>
+    <script src="preview-toggle.js"></script>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

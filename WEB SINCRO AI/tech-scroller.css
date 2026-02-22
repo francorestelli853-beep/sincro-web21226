@@ -1,0 +1,79 @@
+/* =========================================
+   Animated Tech Stack Scroller
+   ========================================= */
+
+.tech-scroller-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /* Add padding to prevent clipping when badges scale on hover */
+    padding: 20px 0;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0));
+}
+
+.tech-scroller {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+}
+
+.tech-scroller-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-left 30s linear infinite;
+}
+
+/* The track no longer pauses on hover */
+
+.tech-badge-scroll {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: var(--font-small);
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
+
+.tech-badge-scroll:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--apple-blue);
+    transform: translateY(-3px) scale(1.05);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 113, 227, 0.2);
+    z-index: 10;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 2rem));
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tech-scroller-track {
+        animation-duration: 20s;
+    }
+
+    .tech-badge-scroll {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}

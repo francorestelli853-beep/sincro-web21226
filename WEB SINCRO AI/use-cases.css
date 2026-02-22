@@ -1,0 +1,99 @@
+/* =========================================
+   Use Cases Container
+   ========================================= */
+
+.use-cases-container {
+    background: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.use-cases-title {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.use-case-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.use-case-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+}
+
+.use-case-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.use-case-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.use-case-name {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
+}
+
+.use-case-desc {
+    font-size: 12px;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.use-case-result {
+    font-size: 13px;
+    color: #10b981;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .use-cases-container {
+        display: none !important;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .use-case-card {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .use-case-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+}

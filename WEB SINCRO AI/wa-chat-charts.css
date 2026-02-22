@@ -1,0 +1,318 @@
+/* =============================================
+   WhatsApp Chat Demo Styles
+   ============================================= */
+
+.wa-chat-demo {
+    background: #0b141a;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    max-width: 340px;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.wa-header {
+    background: #1f2c34;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.wa-avatar {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.wa-header-info {
+    flex: 1;
+}
+
+.wa-name {
+    color: #e9edef;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.wa-status {
+    color: #25d366;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.wa-time-badge {
+    background: rgba(37, 211, 102, 0.15);
+    color: #25d366;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 20px;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    white-space: nowrap;
+}
+
+.wa-messages {
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #0b141a;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.wa-msg {
+    max-width: 80%;
+    padding: 7px 10px 4px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    line-height: 1.4;
+    position: relative;
+    animation: waMsgIn 0.3s ease forwards;
+    opacity: 0;
+}
+
+.wa-msg:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.wa-msg:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.wa-msg:nth-child(3) {
+    animation-delay: 1.0s;
+}
+
+.wa-msg:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes waMsgIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.wa-msg p {
+    margin: 0 0 2px;
+    color: #e9edef;
+}
+
+.wa-msg strong {
+    color: #ffffff;
+}
+
+.wa-msg-out {
+    background: #005c4b;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.wa-msg-in {
+    background: #1f2c34;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.wa-ts {
+    display: block;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.45);
+    text-align: right;
+    margin-top: 2px;
+}
+
+/* =============================================
+   Dashboard Charts Styles
+   ============================================= */
+
+.dash-charts-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.dash-chart-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.dash-chart-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
+
+/* --- Donut Chart --- */
+.donut-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.donut-svg {
+    width: 110px;
+    height: 110px;
+    transform: rotate(-90deg);
+    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.3));
+}
+
+.donut-seg {
+    stroke-dasharray: 0 285.27;
+    animation: donutGrow 1s ease forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+@keyframes donutGrow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.donut-svg text {
+    transform: rotate(90deg);
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.donut-legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-item b {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 2px;
+}
+
+/* --- Bar Chart --- */
+.bar-chart-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bar-chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 80px;
+}
+
+.bc-bar-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.bc-bar {
+    width: 100%;
+    height: var(--h, 50%);
+    background: var(--c, #6366f1);
+    border-radius: 4px 4px 0 0;
+    animation: barRise 0.8s ease forwards;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--c) 40%, transparent);
+}
+
+.bc-bar-group:nth-child(1) .bc-bar {
+    animation-delay: 0.1s;
+}
+
+.bc-bar-group:nth-child(2) .bc-bar {
+    animation-delay: 0.2s;
+}
+
+.bc-bar-group:nth-child(3) .bc-bar {
+    animation-delay: 0.3s;
+}
+
+.bc-bar-group:nth-child(4) .bc-bar {
+    animation-delay: 0.4s;
+}
+
+.bc-bar-group:nth-child(5) .bc-bar {
+    animation-delay: 0.5s;
+}
+
+.bc-bar-group:nth-child(6) .bc-bar {
+    animation-delay: 0.6s;
+}
+
+@keyframes barRise {
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.bc-bar-group span {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+}
+
+.bc-label {
+    font-size: 10px;
+    color: #25d366;
+    font-weight: 600;
+    text-align: center;
+    padding: 4px 8px;
+    background: rgba(37, 211, 102, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+/* Responsive: stack charts on small screens */
+@media (max-width: 768px) {
+    .dash-charts-row {
+        grid-template-columns: 1fr;
+    }
+}
